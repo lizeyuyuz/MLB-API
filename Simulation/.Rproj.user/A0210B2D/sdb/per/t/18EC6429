@@ -1,0 +1,21 @@
+{
+    "collab_server" : "",
+    "contents" : "library(testthat)\nlibrary(Simulation)\n\ntest_check(\"Simulation\")\n",
+    "created" : 1493350956145.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "1526791382",
+    "id" : "18EC6429",
+    "lastKnownWriteTime" : 1493351045,
+    "last_content_update" : 1493351045214,
+    "path" : "~/Dropbox/umich_2017_winter/stats701/final_project/Simulation/tests/testthat.R",
+    "project_path" : "tests/testthat.R",
+    "properties" : {
+        "tempName" : "Untitled2"
+    },
+    "relative_order" : 4,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}

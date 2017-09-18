@@ -1,0 +1,16 @@
+Package: BaseballAPI
+Type: Package
+Title: Scrape Baseball teams and players statistics
+Version: 0.1.0
+Author: Zeyu Li
+Maintainer: Zeyu Li <lizeyu@umich.edu>
+Description: This package scrapes statistics of active baseball teams and of their players from "http://www.baseball-reference.com/". The package provides two functions: one scrapes a list of players on a given baseball team; the other scrapes an individual player's statistics on a given baseball team in a specified area. The package contains a lookup table of active baseball teams' names.
+License: GPL-3
+Encoding: UTF-8
+LazyData: true
+RoxygenNote: 6.0.1
+imports:
+    stringr 
+    stringdist
+    XML
+Suggests: testthat

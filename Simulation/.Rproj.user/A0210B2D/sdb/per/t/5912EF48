@@ -1,0 +1,20 @@
+{
+    "collab_server" : "",
+    "contents" : "Package: BaseballAPI\nType: Package\nTitle: Scrape Baseball teams and players statistics\nVersion: 0.1.0\nAuthor: Zeyu Li\nMaintainer: Zeyu Li <lizeyu@umich.edu>\nDescription: This package scrapes statistics of active baseball teams and of their players from \"http://www.baseball-reference.com/\". The package provides two functions: one scrapes a list of players on a given baseball team; the other scrapes an individual player's statistics on a given baseball team in a specified area. The package contains a lookup table of active baseball teams' names.\nLicense: GPL-3\nEncoding: UTF-8\nLazyData: true\nRoxygenNote: 6.0.1\nimports:\n    stringr \n    stringdist\n    XML\nSuggests: testthat\n",
+    "created" : 1493351559773.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "1931530721",
+    "id" : "5912EF48",
+    "lastKnownWriteTime" : 1493267683,
+    "last_content_update" : 1493267683,
+    "path" : "~/Dropbox/umich_2017_winter/stats701/final_project/BaseballAPI/DESCRIPTION",
+    "project_path" : null,
+    "properties" : {
+    },
+    "relative_order" : 8,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "dcf"
+}

@@ -1,0 +1,21 @@
+{
+    "collab_server" : "",
+    "contents" : "context(\"regsim\")\nlibrary(stringr)\nlibrary(rmutil)\nlibrary(ggplot2)\nlibrary(gridExtra)\nlibrary(reshape2)\n\n\ntest_that(\"check output class\",{\n    expect_is(regsim(reps = 100, n = 100, beta = 1.2, eps.dist = \"uniform\", min = -1, max = 1), \"list\")\n    expect_is(regsim(reps = 100, n = 100, beta = 1.2, eps.dist = \"t\"), \"list\")\n    expect_is(regsim(reps = 100, n = 100, beta = 1.2, eps.dist = \"laplace\", m = 0, s = 1), \"list\")\n})\n\ntest_that(\"check for different beta values\",{\n    expect_silent(regsim(reps = 100, n = 100, beta = -1.2, eps.dist = \"uniform\", min = -1, max = 1))\n    expect_silent(regsim(reps = 100, n = 100, beta = 1.2*100, eps.dist = \"t\"))\n    expect_is(regsim(reps = 100, n = 100, beta = 1.2, eps.dist = \"laplace\", m = 0, s = 1), \"list\")\n})\n\n\ntest_that(\"check list element output class\",{\n    # check beta hat\n    expect_is(regsim(reps = 100, n = 100, beta = 1.2, eps.dist = \"uniform\", min = -1, max = 1)$beta_hat, \"data.frame\")\n    expect_is(regsim(reps = 100, n = 100, beta = 1.2, eps.dist = \"t\")$beta_hat, \"data.frame\")\n    expect_is(regsim(reps = 100, n = 100, beta = 1.2, eps.dist = \"laplace\", m = 0, s = 1)$beta_hat, \"data.frame\")\n\n    # check r-sqaured\n    expect_is(regsim(reps = 100, n = 100, beta = 1.2, eps.dist = \"uniform\", min = -1, max = 1)$rsq, \"data.frame\")\n    expect_is(regsim(reps = 100, n = 100, beta = 1.2, eps.dist = \"t\")$rsq, \"data.frame\")\n    expect_is(regsim(reps = 100, n = 100, beta = 1.2, eps.dist = \"laplace\", m = 0, s = 1)$rsq, \"data.frame\")\n\n    # check power\n    expect_is(regsim(reps = 100, n = 100, beta = 1.2, eps.dist = \"uniform\", min = -1, max = 1)$power, \"data.frame\")\n    expect_is(regsim(reps = 100, n = 100, beta = 1.2, eps.dist = \"t\")$power, \"data.frame\")\n    expect_is(regsim(reps = 100, n = 100, beta = 1.2, eps.dist = \"laplace\", m = 0, s = 1)$power, \"data.frame\")\n})\n\ntest_that(\"check outpute names\",{\n    # check beta hat\n    expect_named(regsim(reps = 100, n = 100, beta = 1.2, eps.dist = \"uniform\", min = -1, max = 1),\n                 c(\"beta_hat\", \"power\", \"rsq\"))\n    expect_named(regsim(reps = 100, n = 100, beta = 1.2, eps.dist = \"t\"),\n              c(\"beta_hat\", \"power\", \"rsq\"))\n\n    expect_named(regsim(reps = 100, n = 100, beta = 1.2, eps.dist = \"t\")$rsq,\n                 c(\"sim\", \"norm\"))\n    expect_named(regsim(reps = 100, n = 100, beta = 1.2, eps.dist = \"laplace\", m = 0, s = 1)$beta_hat,\n              c(\"sim\", \"norm\"))\n    expect_named(regsim(reps = 100, n = 100, beta = 1.2, eps.dist = \"t\")$power,\n                 c(\"sim\", \"norm\"))\n})\n",
+    "created" : 1493350861431.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "1583451419",
+    "id" : "CE3A265C",
+    "lastKnownWriteTime" : 1493351608,
+    "last_content_update" : 1493351608012,
+    "path" : "~/Dropbox/umich_2017_winter/stats701/final_project/Simulation/tests/testthat/test.regsim.R",
+    "project_path" : "tests/testthat/test.regsim.R",
+    "properties" : {
+        "marks" : "<:0,0\n>:0,0"
+    },
+    "relative_order" : 3,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}

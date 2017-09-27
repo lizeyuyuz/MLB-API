@@ -4,7 +4,7 @@ This package scrapes 2017 statistics of active MLB baseball teams and of their p
 
 # Downloading and installing the R package
 
-```{r}
+``` r
 # install.packages('devtools')
 library(devtools)
 
@@ -15,7 +15,7 @@ library(MLBscrapeR)
 
 # Examples use of functions 
 
-```{r}
+``` r
 # to get list of players on an active team
 getPlayers(team = "Baltimore Orioles")
 

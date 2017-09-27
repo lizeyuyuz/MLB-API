@@ -1,8 +1,4 @@
 context("getStats")
-library(stringr)
-library(stringdist)
-library(XML)
-
 
 test_that("check output class", {
     # batting

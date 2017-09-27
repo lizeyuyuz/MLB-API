@@ -1,7 +1,6 @@
 context("getPlayers")
-library(stringr)
-library(stringdist)
-library(XML)
+library(testthat)
+library(BaseballAPI)
 
 test_that("check output class",{
     expect_is(class(getPlayers(team = "Baltimore Orioles")), "character")

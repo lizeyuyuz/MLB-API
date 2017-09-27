@@ -1,7 +1,6 @@
 context("getAbb")
-library(stringr)
-library(stringdist)
-library(XML)
+library(testthat)
+library(BaseballAPI)
 
 test_that("check that output is character",{
     expect_is(getAbb("New York White Sox"), "character")

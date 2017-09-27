@@ -1,4 +1,4 @@
-Package: BaseballAPI
+Package: MLBscrapeR
 Type: Package
 Title: Scrape Baseball teams and players statistics
 Version: 0.1.0

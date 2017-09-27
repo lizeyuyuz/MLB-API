@@ -1,6 +1,6 @@
-\name{BaseballAPI}
-\alias{BaseballAPI}
-\title{Baseball API}
+\name{MLBscrapeR}
+\alias{MLBscrapeR}
+\title{MLB web scraping R package}
 
 \usage{
 getPlayers(team)
